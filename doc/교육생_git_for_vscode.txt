@@ -1,0 +1,32 @@
+1) github 계정 생성
+2) wsl 로그인, 작업 디렉토리 생성
+
+mkdir ~/work
+cd ~/work
+
+3) 계정 설정
+
+git config --global user.name "Bard K. Roh"
+git config --global user.email "bardroh@weable.ai"
+git config --global --list
+
+4-1) ssh키 설정 & git clone
+
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+
+화면의 내용을 전부 복사해서 github의 Settings-SSH Keys에 붙임 
+
+git clone git@github.com:weable-kosa/kosa-chatgpt-2024-1st.git
+
+4-2) github token 설정 & git clone
+
+https clone시에는 basic token 설정, repo 관련 모든 권한 할당
+
+git clone https://[사용자 id]:[access token]@github.com/weable72/kosa-chatgpt-2024-1st.git
+
+5) 작업하고 git add; git commit; git push
+
+6) 작업 전 항상 git pull (본인 폴더만 작업)
+
+VS Code에서는 Jupyter, Python, WSL Extension 설치
